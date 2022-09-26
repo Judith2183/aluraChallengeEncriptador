@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="cuerpo" >
+            <div id="logo">
+               <img id="imglogo" src="image\Logo.png" >
+               <h1>Encriptador de texto</h1>
+            </div>
+               <input id="input" type="text" placeholder="Ingrese el texto aqui">
+               <p id="advertencia">&#9888 Solo letras minusculas y sin acentos</p>
+               <button id="boton1">Encriptar</button>
+               <button id="boton2">Desencriptar</button>
+            <div id="salida">
+                <textarea name="" id="encriptado" cols="30" rows="10"></textarea>
+               <img id="muñeco" src="image\muñeco.png" >
+               <p id="mensaje">Ningun mensaje fue encontrado</p>
+               <p id="mensaje1">Ingresa el texto que deseas encriptar o desencriptar</p>
+               <button id="copiar">Copiar</button>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        var input = document.getElementById("input");
+        input.focus();
+        document.getElementById("encriptado").style.visibility = "hidden";
+        document.getElementById("copiar").style.visibility = "hidden";
+
+        function limpiar(){
+            var input = document.getElementById("input");
+            input.value='';
+            input.focus();
+        }
+
+        function encriptar(){
+            var input = document.getElementById("input").value;
+            var txtCifrado = input.replace(/e/mg,"enter");
+            var txtCifrado = txtCifrado.replace(/i/mg,"ines");
+            var txtCifrado = txtCifrado.replace(/o/mg,"ober");
+            var txtCifrado = txtCifrado.replace(/a/mg,"ai");
+            var txtCifrado = txtCifrado.replace(/u/mg,"ufat");
+            document.getElementById("muñeco").style.visibility="hidden";
+            document.getElementById("mensaje").style.visibility ="hidden";
+            document.getElementById("mensaje1").style.visibility ="hidden";
+            document.getElementById("encriptado").style.visibility = "visible";
+            document.getElementById("encriptado").innerHTML = txtCifrado;
+            document.getElementById("copiar").style.visibility = "visible";
+            limpiar();
+        }
+
+        var boton1 = document.getElementById("boton1");
+        boton1.onclick = encriptar;
+        
+        function desencriptar(){
+            var input = document.getElementById("input").value;
+            var txtDescifrado = input.replace(/enter/mg,"e");
+            var txtDescifrado = txtDescifrado.replace(/ines/mg, "i");
+            var txtDescifrado = txtDescifrado.replace(/ober/mg,"o");
+            var txtDescifrado = txtDescifrado.replace(/ai/mg, "a");
+            var txtDescifrado = txtDescifrado.replace(/ufat/mg,"u");
+            document.getElementById("muñeco").style.visibility="hidden";
+            document.getElementById("mensaje").style.visibility ="hidden";
+            document.getElementById("mensaje1").style.visibility ="hidden";
+            document.getElementById("encriptado").innerHTML = txtDescifrado;
+            limpiar();
+        }
+
+        var boton2 = document.getElementById("boton2");
+        boton2.onclick = desencriptar;
+ 
+        function copiar(){
+            encriptado.select();
+            document.execCommand("copy");
+            limpiar();
+        }
+
+        var boton = document.getElementById("copiar");
+        boton.onclick = copiar;
+    </script>
+</html>

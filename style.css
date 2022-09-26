@@ -1,0 +1,133 @@
+
+body{
+    position: relative;
+    height: 500px;
+    background: #E5E5E5;
+    font-family: 'Inter';
+}
+
+#logo{
+   display: inline-block;
+   width: 60%;
+   margin-top: 1%;
+   margin-left: 15%px;
+}
+
+h1{
+    display: inline-block;
+    text-align: center;
+    width: 60%;
+}
+
+#input{
+    width: 40%;
+    height: 50px;
+    margin-left: 10%;
+    margin-top: 100px;
+    font-size: 25px;
+    background: #E5E5E5;
+    border: none;
+}
+
+#advertencia{
+    width: 40%;
+    font-size: 12px;
+    line-height: 150%;
+    margin-left: 100px;
+    margin-top: 200px;
+    margin-right:auto;
+}
+
+#boton1{
+    margin-left: 100px;
+    width: 20%;
+    height: 50px;
+    font-size: 16px;
+    background: #0A3871;
+    border-radius: 24px;
+}
+
+#boton1:hover{
+    transform: scale(90%); transition: all;
+    cursor: pointer;
+}
+
+#boton2{
+    width: 20%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 24px;
+    background: #5e82ad;
+}
+
+#boton2:hover{
+    transform:scale(90%);transition:all;
+    cursor: pointer;
+}
+
+#salida{
+    border: 2px #000000 solid;
+    border-radius: 24px;
+    position: fixed;
+    width: 20%;
+    height: 500px;
+    left: 65%;
+    top: 10%;
+}
+
+#encriptado{
+    width: 90%;
+    height: 100px;   
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background: #E5E5E5;
+    border-color: #E5E5E5;
+    text-align: center;
+    font-size: 20px;
+}
+
+#muñeco{
+    width: 75%;
+    display: block;
+    margin: auto;
+    margin-top: 0px;
+}
+
+#mensaje{
+    width: 90%;
+    margin: 5%;
+    text-align: center;
+    font-size: 18px;
+}
+
+#mensaje1{
+    width: 90%;
+    margin: 5%;
+    text-align: center;
+    font-size: 12px;
+}
+
+#copiar{
+    width: 80%;
+    height: 45px;
+    font-size: 16px;
+    border-radius: 24px;
+    color: #0A3871;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+}
+
+#copiar:hover{
+    transform: scale(90%); transition: all;
+    cursor: pointer;
+}
+
+#txtImage{    
+    width: 70%;
+    margin: 15%;
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+}
